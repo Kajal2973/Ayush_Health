@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}Profile - AYUSH Health Web{% endblock %}
+{% block content %}
+<h2>Hello, {{ current_user.username }}!</h2>
+<p>Here are your saved herbs:</p>
+<ul>
+    {% for herb in herbs %}
+    <li>{{ herb.name }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}
